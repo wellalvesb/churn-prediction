@@ -26,20 +26,29 @@ O projeto está organizado da seguinte forma:
 
 ---
 
-## 📊 Resultados Obtidos
-O foco da modelagem foi maximizar o **Recall** da classe "Churn" (1), pois o custo de não detectar um cancelamento é maior do que oferecer um desconto desnecessário.
+## 📈 Resultados Obtidos
+O projeto evoluiu em duas etapas. Focamos em maximizar o **Recall** da classe "Churn" (1).
 
-* **Acurácia Global:** 97%
-* **Precision (Churn):** 0.80
-* **Recall (Churn):** 0.31*
+### Versão 1 (Sem Balanceamento)
+* Precision: 0.80
+* Recall: 0.31
+* *Diagnóstico:* O modelo tinha dificuldade em identificar a classe minoritária.
 
-> ⚠️ *Nota: O Recall de 31% indica dificuldade do modelo com dados desbalanceados. Próximas versões incluirão técnicas de SMOTE.*
+### Versão 2 (Com SMOTE)
+Aplicamos técnica de oversampling (SMOTE) nos dados de treino.
+* **Precision:** 0.30 (Caiu, pois o modelo arrisca mais)
+* **Recall:** 0.46 (Subiu drasticamente, detectando mais cancelamentos)
 
-### Visualização da Performance
-![Matriz de Confusão](images/confusion_matrix.png)
-*A matriz acima mostra onde o modelo acertou (diagonal azul escura) e onde errou.*
+> **Conclusão:** A Versão 2 é mais segura para o negócio, pois detecta 46% dos cancelamentos contra apenas 31% da versão anterior.
 
+### Comparativo Visual
+| Matriz V1 (Original) | Matriz V2 (Balanceada) |
+| :---: | :---: |
+| ![Matriz V1](images/confusion_matrix.png) | ![Matriz V2](images/confusion_matrix_v2.png) |
 ---
+## 🚀 Próximos Passos (Roadmap)
+1. **Deploy em Produção:** Criar uma API/Interface web para uso do time de marketing (Em andamento).
+2. **Feature Engineering:** Testar novas variáveis derivadas.
 
 ## 🚀 Como Executar
 1. Clone o repositório:
