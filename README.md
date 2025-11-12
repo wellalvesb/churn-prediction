@@ -46,9 +46,14 @@ Aplicamos técnica de oversampling (SMOTE) nos dados de treino.
 | :---: | :---: |
 | ![Matriz V1](images/confusion_matrix.png) | ![Matriz V2](images/confusion_matrix_v2.png) |
 ---
+## 📱 Aplicação Web (Streamlit)
+Para demonstrar o modelo em funcionamento, desenvolvi uma interface web interativa onde é possível simular novos clientes e receber a previsão em tempo real.
+
+**Pré-requisitos para rodar:**
+```bash
+pip install streamlit
 ## 🚀 Próximos Passos (Roadmap)
-1. **Deploy em Produção:** Criar uma API/Interface web para uso do time de marketing (Em andamento).
-2. **Feature Engineering:** Testar novas variáveis derivadas.
+1. **Feature Engineering:** Testar novas variáveis derivadas.
 
 ## 🚀 Como Executar
 1. Clone o repositório:
